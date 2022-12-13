@@ -1,0 +1,31 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div #Jokes {
+    padding: 15px 50px;
+    background: #f44336;
+    color: white;
+    border: #f44336;
+    margin: 10px 30%;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+div #Jokes:hover {
+    background-color: #e73023;
+    color: black;
+    border-radius: 3px;
+    box-shadow: 1p0 8px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.Jokespara {
+    margin: 20px 5px;
+    font-size: 24px;
+    text-align: center;
+}
