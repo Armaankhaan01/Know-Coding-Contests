@@ -25,7 +25,7 @@ response.then((v) => {
                     <h5 class="card-title">${contest[item].name}</h5>
                     <p class="card-text">Status is ${contest[item].status} and site is ${contest[item].site} </p>
                     <p class="card-text"> In 24 Hours = ${contest[item].in_24_hours}</p>
-                    <p class="card-text">Starts at ${contest[item].start_time}</p>
+                    <p class="card-text">Starts at ${new Date(contest[item].start_time).toLocaleString('en-IN', option)}</p>
                     <p class="card-text">Ends at ${new Date(contest[item].end_time).toLocaleString('en-IN', option)}</p>
                     <a href="${contest[item].url}" class="btn btn-primary">Go To Official Website</a>
                 </div>
