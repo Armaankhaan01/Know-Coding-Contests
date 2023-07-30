@@ -1,5 +1,15 @@
 let url = "https://kontests.net/api/v1/all"
-cardContainer = document.getElementById('cardContainer')
+let cardContainer = document.getElementById('cardContainer')
+const option = {
+        timeZone: "Asia/Kolkata",
+        hour12: true,
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+    };
 let response = fetch(url)
 response.then((v) => {
     return v.json()
@@ -16,7 +26,7 @@ response.then((v) => {
                     <p class="card-text">Status is ${contest[item].status} and site is ${contest[item].site} </p>
                     <p class="card-text"> In 24 Hours = ${contest[item].in_24_hours}</p>
                     <p class="card-text">Starts at ${contest[item].start_time}</p>
-                    <p class="card-text">Ends at ${contest[item].end_time}</p>
+                    <p class="card-text">Ends at ${new Date(contest[item].end_time).toLocaleString('en-IN', option)}</p>
                     <a href="${contest[item].url}" class="btn btn-primary">Go To Official Website</a>
                 </div>
             </div>
